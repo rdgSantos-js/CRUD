@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<title>Document</title>
 
 	<!-- Bootstrap -->
@@ -39,6 +40,11 @@
             @yield('create-user')
         </div>   
     </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"></script>
 
     <script src="{{ url("assets/js/script.js") }}"></script>
 </body>

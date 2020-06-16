@@ -5,22 +5,23 @@
 
 		e.preventDefault();
 
-		let token = doc.getElementsByName('_token')[0].value;
+		let token = $('meta[name="csrf-token"]').attr('content');
 
 		if(confirm("Deseja mesmo apagar?")){
+		    
+		    $.ajaxSetup({
+              headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+            });
 
-			let ajax = new XMLHttpRequest();
-
-			ajax.open("DELETE", e.target.parentNode.href);
-			ajax.setRequestHeader('X-CSRF_TOKEN', token);
-
-			ajax.onreadystatechange = function(){
-				if(ajax.readyState === 4 && ajax.status === 200){
-					win.location.href = "/";
-				}
-			}
-
-			ajax.send();
+            $.ajax({
+                url: e.target.parentNode.href,
+                type: 'DELETE',
+                success:function(response) {
+                   win.location.href="/";
+                }
+             });
 
 		}else{
 			return false;
