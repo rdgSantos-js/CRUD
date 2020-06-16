@@ -1,7 +1,7 @@
 <h1>CRUD</h1>
-<small>Sistema CRUD de Usuários simples feito com Laravel e Bootstrap 4</small>
+<h3>Sistema CRUD de Usuários simples feito com Laravel e Bootstrap 4</h3>
 
 
-<h6>Obs: um JSON de usuários está sendo imprimido no console.</h6>
-<p>Usuário: umbler</p>
-<p>Senha: testehospedagem</p>
+<p>Obs: um JSON de usuários está sendo imprimido no console.</p>
+<h6>Usuário: umbler</h6>
+<h6>Senha: testehospedagem</h6>
