@@ -1,4 +1,10 @@
 (function (win, doc) {
+
+
+	let toConsole = document.querySelectorAll('#console')[0].textContent;
+
+	console.log(JSON.parse(toConsole));
+
 	'use strict';
 
 	function confirmDel(e){

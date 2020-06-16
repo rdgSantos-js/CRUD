@@ -2,6 +2,7 @@
 
 @section('users-list')
 	<div class="container">
+		<p id="console" style="display: none;">{{ $users }}</p>
 		@csrf
 		<table class="table table-hover">
 	        <thead class="thead-dark">
@@ -10,6 +11,7 @@
 	                <th>Nome</th>
 	                <th>ADM?</th>
 	                <th>E-mail</th>
+	                <th>Criado em</th>
 	                <th></th>
 	                <th></th>
 	            </tr>
@@ -21,6 +23,7 @@
 	        		<td>{{$user->name}}</td>
 	        		<td>{{$user->admin}}</td>
 	        		<td>{{$user->email}}</td>
+	        		<td>{{$user->created_at}}</td>
 	        		<td>
 	        			<a href="{{ url("users/$user->id/edit") }}">	<button class="btn btn-warning">Editar Usuário</button>
 	        			</a>
